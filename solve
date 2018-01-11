@@ -1,1 +1,11 @@
 https://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/install-virtualbox-4-5-ubuntu-16-04.html
+
+sudo nano /etc/apt/sources.list
+deb http://download.virtualbox.org/virtualbox/debian xenial contrib
+
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+sudo apt-get update
+sudo apt-get purge dkms
+sudo apt-get install dkms
+sudo apt-get install virtualbox-5.2
+/sbin/vboxconfig
